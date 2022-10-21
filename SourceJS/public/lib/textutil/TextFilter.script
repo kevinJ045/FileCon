@@ -1,0 +1,92 @@
+/* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
+var utils;
+(function (utils) {
+	var file;
+	(function (file) {
+		var textutil;
+		(function (textutil) {
+			var TextFilter = /** @class */ (function () {
+				function TextFilter(data) {
+					if (this.data === undefined) {
+						this.data = null;
+					}
+					this.data = data;
+				}
+				TextFilter.prototype.getData = function () {
+					return this.data;
+				};
+				TextFilter.prototype.length = function () {
+					return this.data.length;
+				};
+				TextFilter.prototype.amountOf$char = function (a) {
+					var amount = 0;
+					{
+						var array13056 = /* toCharArray */ (this.data).split('');
+						for (var index13055 = 0; index13055 < array13056.length; index13055++) {
+							var c = array13056[index13055];
+							{
+								if ((function (c) { return c.charCodeAt == null ? c : c.charCodeAt(0); })(c) == (function (c) { return c.charCodeAt == null ? c : c.charCodeAt(0); })(a))
+									amount++;
+							}
+						}
+					}
+					return amount;
+				};
+				TextFilter.prototype.amountOf$java_lang_String = function (srch) {
+					if (srch == null || (srch === ("")))
+						return 0;
+					if (srch === this.data)
+						return 1;
+					var s = 0;
+					for (var i = 0; i <= this.data.length - srch.length; i++) {
+						{
+							var window_1 = this.data.substr(i, i + srch.length);
+							if (srch === window_1) {
+								s += 1;
+								i += (srch.length - 1);
+							}
+						}
+						;
+					}
+					return s;
+				};
+				TextFilter.prototype.amountOf = function (srch) {
+					if (((typeof srch === 'string') || srch === null)) {
+						return this.amountOf$java_lang_String(srch);
+					}
+					else if (((typeof srch === 'string') || srch === null)) {
+						return this.amountOf$char(srch);
+					}
+					else
+						throw new Error('invalid overload');
+				};
+				TextFilter.prototype.getPercent$char = function (c) {
+					return (this.amountOf$char(c) / this.data.length) * 100.0;
+				};
+				TextFilter.prototype.getPercent$java_lang_String = function (c) {
+					return ((this.amountOf$java_lang_String(c) * c.length) / this.length()) * 100.0;
+				};
+				TextFilter.prototype.getPercent = function (c) {
+					if (((typeof c === 'string') || c === null)) {
+						return this.getPercent$java_lang_String(c);
+					}
+					else if (((typeof c === 'string') || c === null)) {
+						return this.getPercent$char(c);
+					}
+					else
+						throw new Error('invalid overload');
+				};
+				/**
+				 *
+				 * @return {string}
+				 */
+				TextFilter.prototype.toString = function () {
+					return "TextFilter{data=\'" + this.data + '\'' + '}';
+				};
+				return TextFilter;
+			}());
+			textutil.TextFilter = TextFilter;
+			TextFilter["__class"] = "utils.file.textutil.TextFilter";
+		})(textutil = file.textutil || (file.textutil = {}));
+	})(file = utils.file || (utils.file = {}));
+})(utils || (utils = {}));

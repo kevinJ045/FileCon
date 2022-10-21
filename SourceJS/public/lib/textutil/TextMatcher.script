@@ -1,0 +1,46 @@
+/* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
+var utils;
+(function (utils) {
+    var file;
+    (function (file) {
+        var textutil;
+        (function (textutil) {
+            var TextMatcher = /** @class */ (function () {
+                function TextMatcher(data) {
+                    if (this.data === undefined) {
+                        this.data = null;
+                    }
+                    this.data = data;
+                }
+                /**
+                 *
+                 * @param {*} o
+                 * @return {boolean}
+                 */
+                TextMatcher.prototype.equals = function (o) {
+                    if (this === o)
+                        return true;
+                    if (o == null || this.constructor !== o.constructor)
+                        return false;
+                    var that = o;
+                    return java.util.Objects.equals(this.data, that.data);
+                };
+                /**
+                 *
+                 * @return {number}
+                 */
+                TextMatcher.prototype.hashCode = function () {
+                    return 0;
+                };
+                TextMatcher.prototype.match = function (search) {
+                    if (this.equals(search))
+                        return 100.0;
+                    return new TextFilter(data).getPercent(search);
+                };
+                return TextMatcher;
+            }());
+            textutil.TextMatcher = TextMatcher;
+            TextMatcher["__class"] = "utils.file.textutil.TextMatcher";
+        })(textutil = file.textutil || (file.textutil = {}));
+    })(file = utils.file || (utils.file = {}));
+})(utils || (utils = {}));
