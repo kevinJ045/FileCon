@@ -1,0 +1,51 @@
+# date 27/05/21
+# developer Naol Dereje
+# project Argparser
+
+This is a java program used to parse args from command line argument.
+Simple to use and many useful tools are included in this program
+
+Works from the the argument passed to the main method
+objectives:
+	1 is to control over all arguments
+	2 is to control all parameters
+	3 give ability for parsing with more optionseg. parser.parser("-p","--path")// returns the same value
+
+limit:
+	1 we are able to define only 1 argument with 2 or more options
+
+# defination of params and arguemts
+ according to many users there are 2 types of argument
+  1 argument with parameters
+  2 argument with no parameters
+# argument with parameters
+  This is a type of argument mostly passed to programs with parameters
+  
+  Example is --port 45 543 23 8080
+                |   --------------
+		|            |
+		argumet   parameter
+		
+# argument with no parameters
+  it is an argument that is passed directly to the program with out any parameter
+
+  Example --help
+  do not need any additional information
+  
+
+com.nad.argparser|
+		 |-Argument|
+		 |	   |-length() // return the argument length: int
+		 |	   |-count(arg) // returns the arg length
+		 |	   |-toString() // returns the parameters to array of string: String
+		 |	   |-isEmpty() // returns if the passed argumetns are empty are empty: boolean
+		 |	   |-build() // builds the parameter: ArgumentBuilder
+		 |
+		 |-ArgumentBuilder|-parseParam(param) // parses the given param :: 2 optins String [] and boolean
+		 |		  |-contains(arg) for the argument // checks if an arg is passed: boolean
+		 |
+		 |-Param|
+			|-toString() // returns the values of of params to String: String
+			|-toArray() // returns Param to a raw array of string: String []
+			|-indexOf(param) // returns the index of the param
+			|-get(i) // returns the param at index i : Stirng

@@ -1,0 +1,36 @@
+.page {
+	background-color: var(--theme-dark);
+	height: calc(100vh - 90px);
+	width: calc(100% - 32px);
+	margin: 0px 16px;
+	transition: .6s;
+}
+
+.page.leftbar-acive{
+	margin-left: 66px;
+	width: calc(100% - 82px);
+}
+
+.page--pane--right {
+	overflow: auto;
+	background-color: var(--theme-dark-2);
+	border-radius: 10px;
+}
+
+.page--pane--left {
+	min-width: 100px;
+	overflow: auto;
+	background-color: var(--theme-dark-2);
+	border-radius: 10px;
+	position: relative;
+}
+
+.page .vsplitbar {
+	width: 10px;
+	background: var(--theme-dark) url(../../SourceJS/public/lib/splitter/vgrabber.gif) no-repeat center;
+}
+
+.page--pane--left {
+	padding:0;
+	margin:0;
+}

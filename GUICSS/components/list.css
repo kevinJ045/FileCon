@@ -1,0 +1,57 @@
+.list{
+	list-style: none;
+	width: 100%;
+	overflow: hidden;
+}
+
+.list .item{
+	width: 100%;
+	padding: 5px 10px;
+	border-bottom: 1px solid var(--theme-color);
+	cursor: pointer;
+	height: 30px;
+	padding-left: 0px !important;
+}
+
+.list .item .icon{
+	float: left;
+	height: 100%;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-right: 1px solid var(--theme-color);
+	border-radius: 0 10px 10px 0;
+	color: var(--theme-color);
+}
+
+.list .item .icon.i,
+.list .item .icon *{
+	font-family:'Material-Icons';
+  font-weight:400;
+  font-style:normal;
+  font-size: 20px;
+  display:inline-block;
+  text-transform:none;
+  letter-spacing:normal;
+  word-wrap:normal;
+  white-space:nowrap;
+  direction:ltr;
+}
+
+.list .item .icon folder:before{
+	content: "folder";
+}
+.list .item .icon file:before{
+	content: "insert_drive_file";
+}
+.list .item .icon up:before{
+	content: "arrow_upward";
+}
+
+.list .item .title{
+	float: left;
+	height: 100%;
+	line-height: 30px;
+	padding-left: 5px;
+	color: var(--text-color);
+}

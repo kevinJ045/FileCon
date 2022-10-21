@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gui--Style</title>
+
+	<link rel="stylesheet" type="text/css" href="components/index.css">
+</head>
+<body>
+
+	<div class="navbar" id="navbar">
+		<div class="inner">
+			<button class="menu" id="menu"><i class="material-icons">menu</i></button>
+			<div class="searchbar">
+				<input type="text" id="searchbar" class="input" placeholder="Search...">
+				<button class="searchbtn"><i class="material-icons">search</i></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="page" id="root">
+		<div class="page--pane--left">
+			<div class="tabs">
+				<div class="tab-list">
+					<div class="tab" data-tab="filemanager">
+						FileManager
+					</div>
+					<div class="tab" data-tab="console">
+						Console
+					</div>
+				</div>
+				<div class="tab-pane" id="filemanager">
+					<ul class="list">
+						<li class="item">
+							<div class="icon"><up></up></div>
+							<div class="title">..</div>
+						</li>
+						<li class="item">
+							<div class="icon"><folder></folder></div>
+							<div class="title">css</div>
+						</li>
+						<li class="item">
+							<div class="icon"><file></file></div>
+							<div class="title">a.html</div>
+						</li>
+					</ul>
+
+				</div>
+				<div class="tab-pane" id="console"></div>
+
+			</div>
+		</div>
+		<div class="page--pane--right"></div>
+	</div>
+
+	<div class="leftbar" id="leftbar">
+		
+		<div class="content">
+			
+			<div class="item act">
+				<div class="title">i</div>
+				<div class="inner">
+					Hello
+				</div>
+			</div>
+
+			<div class="item act">
+				<div class="title">i</div>
+				<div class="inner">
+					Hello
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="title">i</div>
+				<div class="inner">
+					Hello
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="hint">Hell</div>
+				<div class="title">
+					i
+				</div>
+				<div class="inner">
+					Hello
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+<!-- 
+	<div class="line-v"></div>
+	<div class="line-h"></div> -->
+
+	<script src="../SourceJS/public/lib/p/p.script"></script>
+	<script src="../SourceJS/public/lib/splitter/splitter.script"></script>
+
+	<script>
+		function ge(){
+			$('#root').splitter({
+				sizeLeft: 200,
+				maxLeft: 250,
+				minLeft: 150
+			});
+		}
+		$('.item.act .title').click(function(){
+			$(this).parent().toggleClass('active');
+		});
+		$('.item .title').hover(function(){
+			$(this).parent().find('.hint').toggleClass('active');
+		});
+		$("#menu").click(function(){
+			$("#leftbar").toggleClass("enabled");
+			$("#navbar").toggleClass("no-radius");
+			$("#root").toggleClass("leftbar-acive");
+		});
+		ge();
+	</script>
+
+</body>
+</html>

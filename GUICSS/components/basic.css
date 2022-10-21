@@ -1,0 +1,125 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none
+}
+
+blockquote,q {
+	quotes: none
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none
+}
+
+:focus {
+	outline: 0
+}
+
+ins {
+	text-decoration: none
+}
+
+del {
+	text-decoration: line-through
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+body {
+	padding: 10px;
+	background: var(--theme-dark);
+	overflow:hidden;
+}
+
+video, audio {
+	margin:3em;
+}
+
+button, input{
+	border: 0;
+	background: transparent;
+	outline: 0;
+}
+
+button{
+	cursor: pointer;
+}
+
+input::placeholder{
+	color: rgba(255, 255, 255, .5);
+}
+
+.line-v{
+	position: fixed;
+	left: 74px;
+	top: 0;
+	width: 2px;
+	height: 100vh;
+	background: #444;
+}
+
+.line-h{
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: 100vw;
+	height: 2px;
+	background: #444;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    max-height: 8px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	opacity: 0.7;
+}
+
+::-webkit-scrollbar-corner{
+	background: var(--theme-color);
+}
+
+.bounce:hover i,
+.list .item:hover .icon *,
+.navbar .inner .menu:hover i,
+.navbar .inner .searchbar .searchbtn:hover i
+{
+	animation: .4s 1 bounce-ic;
+}
+
+@keyframes bounce-ic{
+	0%{
+		transform: scale(1.0);
+	}
+	50%{
+		transform: scale(0.1);
+	}
+	100%{
+		transform: scale(1.0);
+	}
+}

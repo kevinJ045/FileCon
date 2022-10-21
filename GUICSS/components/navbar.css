@@ -1,0 +1,58 @@
+.navbar{
+	position: relative;
+	top: 0;
+	width: calc(100% - 32px);
+	height: 50px;
+	margin: 10px 16px;
+	transition: all .6s;
+	background: var(--theme-dark-2);
+	border-radius: 12.5px;
+	box-shadow: var(--elevation-6);
+	z-index: 999;
+}
+
+.navbar.no-radius{
+	border-radius: 12.5px 12.5px 12.5px 0;
+}
+
+.navbar .inner{
+	/*display: flex;*/
+}
+
+.navbar .inner .menu{
+	position: relative;
+	left: 0;
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-right: 2px solid var(--theme-color);
+	color: var(--theme-color);
+}
+.navbar .inner .searchbar{
+	position: relative;
+	height: 50px;
+	float: left;
+	color: var(--theme-color);
+	width: calc(100% - 60px);
+}
+
+.navbar .inner .searchbar .input{
+	width: calc(100% - 50px);
+	height: 50px;
+	padding: 0 10px 0 10px !important;
+	color: var(--theme-color);
+	font-size: 20px;
+}
+
+.navbar .inner .searchbar .searchbtn{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	color: var(--theme-color);
+	top: 0;
+	right: 0;
+}
+
+
+
+
